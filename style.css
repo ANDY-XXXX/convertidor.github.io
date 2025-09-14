@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+}
+
+#box {
+    /* border: 2px black solid; */
+    background: gray;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#calculadora {
+    /* border: 2px black solid; */
+    /* width: 37vh; */
+    height: 55vh;
+    display: block;
+    border: 1rem;
+}
+
+#pantalla {
+    /* border: 2px solid black; */
+    position: relative;
+    height: 10vh;
+}
+
+/* regla duplicada eliminada para evitar conflictos */
+
+#pantalla select {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    border-radius: 10px;
+    padding: 0.3rem;
+    border: none;
+    text-align: center;
+}
+
+#pantalla input {
+    height: 5rem; /* igual altura que los botones */
+    width: calc(
+        5rem * 4 + 1rem
+    ); /* igual ancho que 4 botones más pequeño espacio */
+    box-sizing: border-box; /* evitar que el padding aumente el ancho */
+    border-radius: 10px;
+    padding: 0.35rem 0.8rem 0.35rem 3.2rem; /* reserva espacio para el select */
+    font-size: 1.85rem;
+    text-align: right;
+    direction: ltr;
+    display: block;
+    margin: 0.4rem auto; /* centrar horizontalmente dentro de pantalla */
+}
+
+#teclado {
+    /* border: 2px solid black; */
+    height: 98%;
+    height: 95%;
+    display: grid;
+    margin-top: 1rem;
+}
+
+#teclado button {
+    height: 5rem;
+    width: 5rem;
+    border: 1px 1px;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+/* Botones desactivados: más oscuros y un poco transparentes */
+#teclado button:disabled {
+    opacity: 0.45;
+    filter: grayscale(30%);
+    cursor: not-allowed;
+}
+
+#teclado button:focus {
+    outline: 3px solid rgba(0, 0, 0, 0.12);
+}
+
+#teclado button img {
+    height: 2rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
